@@ -10,7 +10,7 @@ const Card = props => {
         <p>{scientificName} </p>
         <p>
           <span className="pop-icon">
-            <i class="fas fa-dove" />
+            <i className="fas fa-dove" />
           </span>
           {wildPopulation}
         </p>
