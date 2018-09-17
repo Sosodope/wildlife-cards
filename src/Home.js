@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Card from "./components/Card";
 import "./style.css";
+import CardList from "./components/CardList";
 import { wildlifes } from "./wildlifes";
 
 class Home extends Component {
@@ -8,19 +8,7 @@ class Home extends Component {
     return (
       <div className="container">
         <h1>Endangered Species list</h1>
-        <div className="wildlife">
-          {wildlifes.map(wildlife => {
-            return (
-              <Card
-                key={wildlife.id}
-                img={wildlife.img}
-                name={wildlife.name}
-                scientificName={wildlife.scientificName}
-                wildPopulation={wildlife.wildPopulation}
-              />
-            );
-          })}
-        </div>
+        <CardList wildlifes={wildlifes} />
       </div>
     );
   }
